@@ -18,7 +18,7 @@ let rollSet = [random.nextInt(),random.nextInt(),random.nextInt(),random.nextInt
 print(rollSet)
 
 /*:
- The `GKRandomDistribution` class, by itself, produces a uniform distribution across a specified range—that is, every value between the specified minimum and maximum values is equally likely to occur. Use this class whenever you need a random number that falls within a specific range of numbers.  Dice are a common example of a uniform random distribution with a specific range, as seen in Figure 2-1.
+ The **`GKRandomDistribution`** class, by itself, produces a uniform distribution across a specified range—that is, every value between the specified minimum and maximum values is equally likely to occur. Use this class whenever you need a random number that falls within a specific range of numbers.  Dice are a common example of a uniform random distribution with a specific range, as seen in Figure 2-1.
  */
 //: **Figure 2-1** A Uniform Random Distribution Simulates a Single Die Roll
 
@@ -27,7 +27,7 @@ var rolls = [[Int]]()
 
 
 /*: 
- The `GKGaussianDistribution` class models a Gaussian distribution, also known as a normal distribution, shown in Figure 2-2. In a normal distribution, a certain result—the mean—has the highest probability of occurring, and higher- or lower-valued results are less likely. This distribution is symmetric: results that are the same distance from the mean have the same probability of occurring, whether they are above or below the mean.
+ The **`GKGaussianDistribution`** class models a Gaussian distribution, also known as a normal distribution, shown in Figure 2-2. In a normal distribution, a certain result—the mean—has the highest probability of occurring, and higher- or lower-valued results are less likely. This distribution is symmetric: results that are the same distance from the mean have the same probability of occurring, whether they are above or below the mean.
  */
 
 for i in 0..<100 {

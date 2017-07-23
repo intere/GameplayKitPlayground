@@ -12,7 +12,15 @@
  See the [GameplayKit Guide](https://developer.apple.com/library/content/documentation/General/Conceptual/GameplayKit_Guide/EntityComponent.html#//apple_ref/doc/uid/TP40015172-CH6-SW1) for more information
  */
 
+/*:
+ ----
+ ## Initial Design (Inheritance-based)
+ * A Base class could model the base, which has little to do other than maintain its display representation (such as an SKSpriteNode object in a SpriteKit game) and keep track of how many enemy attacks it has sustained.
+ * An Enemy class could provide a display representation and logic to handle movement.
+ * A Tower class could provide a display representation and logic to handle targeting and firing at enemies.
 
+ */
+//: ![Inheritance-Based Architecture](entity_component_1_2x.png)
 
 /*:
  ----
@@ -30,9 +38,9 @@
 
  ## Composition-Based Architecture Makes Evolving Game Design Easy
  
- Instead of organizing a game’s object model in terms of what each game object is, the Entity-Component pattern encourages you to think about what each game object does. In this example, you can make components for each bit of functionality that might be expected of a base, an enemy, or a tower. One component might handle visual representations; another might handle targeting and firing; another might handle movement; still another might track how much damage has been sustained and update a UI element accordingly; and so on. Create a new subclass of GKComponent for each unique area of functionality.
+ Instead of organizing a game’s object model in terms of what each game object is, the Entity-Component pattern encourages you to think about what each game object does. In this example, you can make components for each bit of functionality that might be expected of a base, an enemy, or a tower. One component might handle visual representations; another might handle targeting and firing; another might handle movement; still another might track how much damage has been sustained and update a UI element accordingly; and so on. Create a new subclass of **`GKComponent`** for each unique area of functionality.
 
- Then, rather than creating classes for each kind of game object, use the GKEntity class as a generic container for components. For example (as shown in the Figure below), one GKEntity instance could represent a tower, so it contains visual and firing components. Another GKEntity instance could represent an enemy, so it contains visual and movement components. To add an enemy that can shoot, simply add both the movement and firing components to the same entity.
+ Then, rather than creating classes for each kind of game object, use the **`GKEntity`** class as a generic container for components. For example (as shown in the Figure below), one **`GKEntity`** instance could represent a tower, so it contains visual and firing components. Another **`GKEntity`** instance could represent an enemy, so it contains visual and movement components. To add an enemy that can shoot, simply add both the movement and firing components to the same entity.
 
  */
 

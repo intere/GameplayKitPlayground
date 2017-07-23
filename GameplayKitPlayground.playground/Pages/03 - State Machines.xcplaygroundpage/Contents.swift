@@ -11,7 +11,7 @@ import GameplayKit
 //: ![Inheritance-Based Architecture](Dispenser_2x.png)
 
 /*:
- In GameplayKit, a state machine is an instance of the GKStateMachine class. For each state, you define the actions that occur while in that state, or when transitioning into or out of that state, by creating a custom subclass of GKState. At any one time, a state machine has exactly one current state. When you perform per-frame update logic for your game objects (for example, from within the update: method of a SpriteKit scene or the renderer:updateAtTime: method of a SceneKit render delegate), call the updateWithDeltaTime: method of the state machine, and it in turn calls the same method on its current state object. When your game logic requires a change in state, call the state machine’s enterState: method to choose a new state.
+ In GameplayKit, a state machine is an instance of the **`GKStateMachine`** class. For each state, you define the actions that occur while in that state, or when transitioning into or out of that state, by creating a custom subclass of **`GKState`**. At any one time, a state machine has exactly one current state. When you perform per-frame update logic for your game objects (for example, from within the update: method of a SpriteKit scene or the renderer:updateAtTime: method of a SceneKit render delegate), call the updateWithDeltaTime: method of the state machine, and it in turn calls the same method on its current state object. When your game logic requires a change in state, call the state machine’s enterState: method to choose a new state.
  */
 
 //: ![Reference Enemy States](state_machine_2_2x.png)
@@ -92,7 +92,7 @@ class EnemyDefeatedState: EnemyState {
  
  # Create and Drive a State Machine
  
- After you define GKState subclasses, you can use them to create a state machine. In the Maze game, an AAPLIntelligenceComponent object manages a state machine for each enemy character. (To learn more about the component-based architecture in this game, see the Entities and Components chapter.) Setting up a state machine is simply a matter of creating and configuring an instance of each state class, then creating a GKStateMachine instance that uses those objects.
+ After you define **`GKState`** subclasses, you can use them to create a state machine. In the Maze game, an **`AAPLIntelligenceComponent`** object manages a state machine for each enemy character. (To learn more about the component-based architecture in this game, see the Entities and Components chapter.) Setting up a state machine is simply a matter of creating and configuring an instance of each state class, then creating a **`GKStateMachine`** instance that uses those objects.
 
  */
 
